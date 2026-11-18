@@ -38,8 +38,6 @@ Payment integration	Stripe API / Stripe Checkout
 Database design	draw.io (ERD)
 Development environment	VS Code, Git, GitHub
 
-
-🗂️ Project Folder Structure
 LUMIERE/
 ├── actions/                       # Customer actions, cart and checkout handlers
 ├── admin/                         # Administrator panel
