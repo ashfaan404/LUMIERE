@@ -1,0 +1,22 @@
+# Local credentials and environment settings
+includes/config.local.php
+.env
+.env.*
+!.env.example
+
+# Runtime/user-uploaded files (not sample catalog pictures)
+/assets/uploads/**
+!/assets/uploads/
+!/assets/uploads/profiles/
+!/assets/uploads/promotions/
+!/assets/uploads/profiles/.gitkeep
+!/assets/uploads/promotions/.gitkeep
+
+# Dependencies, caches, editor/OS files
+/vendor/
+/node_modules/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
