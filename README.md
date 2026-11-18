@@ -1,5 +1,8 @@
-UMIÈRE — Perfume E-Commerce Web Application
+LUMIÈRE — Perfume E-Commerce Web Application
 A Full-Stack PHP & MySQL E-Commerce Project
+
+
+
 
 📖 Project Overview
 LUMIÈRE is a full-stack, database-driven perfume e-commerce web application built with PHP, MySQL, HTML, CSS, and JavaScript. It combines an online fragrance storefront with dedicated customer, administrator, and staff workflows.
@@ -38,6 +41,8 @@ Payment integration	Stripe API / Stripe Checkout
 Database design	draw.io (ERD)
 Development environment	VS Code, Git, GitHub
 
+
+🗂️ Project Folder Structure
 LUMIERE/
 ├── actions/                       # Customer actions, cart and checkout handlers
 ├── admin/                         # Administrator panel
