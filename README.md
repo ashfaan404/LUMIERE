@@ -102,14 +102,7 @@ Set up your own SMTP and Stripe test credentials before using email or payment f
 
 ## Development
 
-Contribute by working from a feature branch and testing the application in a local PHP environment.
-
-```bash
-git checkout -b feature/your-feature
-git add .
-git commit -m "Add your feature"
-git push origin feature/your-feature
-```
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
 ### Code Style
 
@@ -125,5 +118,15 @@ This project is available for educational and portfolio use. Add a license file 
 
 ---
 
-**Project:** [LUMIERE](https://github.com/ashfaan404/LUMIERE)
-**Repository:** [github.com/ashfaan404/LUMIERE](https://github.com/ashfaan404/LUMIERE)
+## Author
+
+**Mohamed Ashfaan**
+
+- GitHub: [@ashfaan404](https://github.com/ashfaan404)
+
+## Support
+
+For questions or support, please open an issue on the [GitHub Issues](https://github.com/ashfaan404/LUMIERE/issues) page.
+
+**Last Updated:** October 2026
+**Repository:** [LUMIERE](https://github.com/ashfaan404/LUMIERE)
