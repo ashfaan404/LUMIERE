@@ -1,129 +1,129 @@
-LUMIÈRE — Perfume E-Commerce Web Application
-A Full-Stack PHP & MySQL E-Commerce Project
+# LUMIERE
 
+A modern PHP-based web application featuring elegant styling and interactive functionality.
 
+## Overview
 
+LUMIERE is a full-stack perfume e-commerce platform built with PHP, CSS, and JavaScript. The project combines a responsive storefront with customer accounts, an administrator dashboard, and a separate staff portal.
 
-📖 Project Overview
-LUMIÈRE is a full-stack, database-driven perfume e-commerce web application built with PHP, MySQL, HTML, CSS, and JavaScript. It combines an online fragrance storefront with dedicated customer, administrator, and staff workflows.
+It provides a complete database-backed shopping experience, including authentication, product browsing, cart and wishlist management, checkout, order tracking, reviews, and support tickets.
 
-The project demonstrates practical web development concepts such as database integration, account authentication, product management, shopping cart operations, order processing, and integration with third-party services.
-✨ Key Features
-🛍️ Customer Experience
-- Explore perfume collections, product details, and promotions.
-- Search, filter, and compare fragrances.
-- Manage a shopping cart and wishlist.
-- Register, sign in, and manage account details and delivery addresses.
-- Place orders and view order information and tracking updates.
-- Write product reviews and submit customer support tickets.
-🛠️ Administration Dashboard
-- Manage products, categories, and promotions.
-- Review and update customer orders.
-- Manage staff accounts and customer information.
-- Access reports, payment history, reviews, notifications, and support tickets.
-👥 Staff Portal
-- Separate staff login and dashboard.
-- View assigned operational pages, orders, and order details.
-- Handle customer support tickets and review notifications.
-🔗 Integrations & Data
-- MySQL: Relational storage for catalog, account, order, and operational data.
-- Stripe Checkout: Payment integration designed for test-mode use.
-- PHPMailer: SMTP-based account and OTP email workflows.
-- draw.io: Editable entity-relationship diagram (ERD new.drawio).
-🧰 Technology Stack
-Area	Technology
-Frontend	HTML5, CSS3, JavaScript
-Backend	PHP
-Database	MySQL, PHP mysqli
-Web server	Apache
-Email integration	PHPMailer, SMTP
-Payment integration	Stripe API / Stripe Checkout
-Database design	draw.io (ERD)
-Development environment	VS Code, Git, GitHub
+## Technology Stack
 
+- **Backend:** PHP 8+, MySQL / mysqli
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Server:** Apache
+- **Email:** PHPMailer with SMTP
+- **Payments:** Stripe Checkout
+- **Database Design:** draw.io
 
-🗂️ Project Folder Structure
+## Features
+
+- Customer registration, login, profile, and address management
+- Responsive perfume catalog with search, filtering, and comparison
+- Shopping cart, wishlist, promotions, and checkout
+- Stripe test payments and order tracking
+- Product reviews and customer support tickets
+- Administrator dashboard for products, categories, users, staff, and reports
+- Dedicated staff dashboard for orders and support management
+
+## Getting Started
+
+### Prerequisites
+
+- PHP 8 or newer
+- Apache web server
+- MySQL or MariaDB
+- XAMPP, WAMP, or another local PHP environment
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ashfaan404/LUMIERE.git
+cd LUMIERE
+```
+
+2. Move the project into your web server directory, such as `htdocs/LUMIERE`.
+
+3. Create the database and import `database.sql` through phpMyAdmin or the MySQL CLI.
+
+4. Copy the local configuration template:
+
+```text
+includes/config.local.example.php
+```
+
+Create `includes/config.local.php` and add your database and integration settings:
+
+```php
+'DB_HOST' => 'localhost',
+'DB_USER' => 'root',
+'DB_PASS' => '',
+'DB_NAME' => 'perfume_shop',
+'APP_BASE_URL' => 'http://localhost/LUMIERE',
+```
+
+5. Start Apache and MySQL, then open:
+
+```text
+http://localhost/LUMIERE
+```
+
+## Project Structure
+
+```text
 LUMIERE/
-│
-├── actions/                      # Customer actions and checkout handlers
-│   ├── add_to_cart.php
-│   ├── login_action.php
-│   ├── place_order.php
-│   ├── register_action.php
-│   ├── stripe_success.php
-│   └── ...
-│
-├── admin/                        # Administrator panel
-│   ├── actions/                  # Admin CRUD and management handlers
-│   ├── assets/                   # Admin-specific CSS and JavaScript
-│   ├── includes/                 # Admin authentication, header, footer
-│   ├── pages/                    # Dashboard, products, orders, reports, etc.
-│   ├── login.php
-│   └── logout.php
-│
-├── assets/                       # Shared frontend assets
-│   ├── css/                      # Application stylesheets
-│   ├── images/products/          # Demonstration product images
-│   ├── js/                       # Frontend scripts
-│   └── uploads/                  # Runtime profile/promotion uploads (excluded)
-│
-├── customer/                     # Customer account area
-│   ├── actions/                  # Customer account handlers
-│   ├── addresses.php
-│   ├── order-details.php
-│   ├── orders.php
-│   ├── profile.php
-│   └── wishlist.php
-│
-├── docs/
-│   └── screenshots/             # Add genuine screenshots of the running app
-│
-├── includes/                     # Shared application logic and configuration
-│   ├── app_config.php            # Reads environment/local settings
-│   ├── config.local.example.php  # Template for private local settings
-│   ├── config_email.php          # Email integration
-│   ├── db.php                    # Database connection
-│   ├── functions.php             # Shared helpers
-│   ├── header.php
-│   └── footer.php
-│
-├── pages/                        # Public-facing pages
-│   ├── cart.php
-│   ├── checkout.php
-│   ├── compare.php
-│   ├── home.php
-│   ├── login.php
-│   ├── product.php
-│   ├── register.php
-│   ├── shop.php
-│   ├── support.php
-│   ├── track_order.php
-│   └── ...
-│
-├── src/                          # Bundled PHPMailer library classes
-│
-├── staff/                        # Staff portal
-│   ├── actions/                  # Staff actions
-│   ├── includes/                 # Staff authentication and layout
-│   ├── pages/                    # Staff dashboard and operations
-│   ├── login.php
-│   └── logout.php
-│
-├── .gitignore                    # Excludes private and generated files
-├── database.sql                  # MySQL schema and demo catalog data
-├── ERD new.drawio                # Editable database diagram
-├── index.php                     # Main application entry point
-└── README.md                     # Project documentation
+├── actions/            # Shopping and account actions
+├── admin/              # Administrator dashboard
+├── assets/             # CSS, JavaScript, and images
+├── customer/           # Customer account pages
+├── docs/               # Documentation assets
+├── includes/           # Shared configuration and helpers
+├── pages/              # Public storefront pages
+├── src/                # PHPMailer source files
+├── staff/              # Staff portal
+├── database.sql        # Database schema and demo data
+├── ERD new.drawio      # Database entity relationship diagram
+└── index.php           # Application entry point
+```
 
+## Usage
 
-🗃️ Database Design
-The project includes a relational MySQL schema in database.sql and an editable ER diagram in ERD new.drawio. The database covers products, categories, users, administrators, staff, orders, order items, addresses, wishlists, promotions, reviews, and support tickets, along with related workflows.
-🧪 Project Status
-This repository is intended for local development and portfolio demonstration. It includes the application source code and database design. Complete production-readiness, security auditing, end-to-end tests, and live-payment verification have not been established.
-🚀 Future Improvements
-- Expand automated testing for account, shopping, and order workflows.
-- Review payment confirmation and authorization checks before deployment.
-- Improve error handling, responsiveness, and performance monitoring.
-👨‍💻 Repository
-GitHub: @ashfaan404
-Project: LUMIERE
+The application is organized around three roles:
+
+- **Customers:** Browse products, manage orders, and use account features.
+- **Administrators:** Manage catalog data, customers, staff, reports, and payments.
+- **Staff:** Handle assigned orders and customer support tickets.
+
+Set up your own SMTP and Stripe test credentials before using email or payment features. Stripe and SMTP credentials must remain in `includes/config.local.php` or environment variables and should never be committed.
+
+## Development
+
+Contribute by working from a feature branch and testing the application in a local PHP environment.
+
+```bash
+git checkout -b feature/your-feature
+git add .
+git commit -m "Add your feature"
+git push origin feature/your-feature
+```
+
+### Code Style
+
+- Follow the existing PHP and file naming conventions.
+- Keep database credentials outside the repository.
+- Use semantic HTML and reusable CSS classes.
+- Keep application logic out of view files where possible.
+- Test account, checkout, and payment flows before submitting changes.
+
+## License
+
+This project is available for educational and portfolio use. Add a license file if you intend to distribute it publicly under specific terms.
+
+---
+
+**Project:** [LUMIERE](https://github.com/ashfaan404/LUMIERE)
+**Repository:** [github.com/ashfaan404/LUMIERE](https://github.com/ashfaan404/LUMIERE)
